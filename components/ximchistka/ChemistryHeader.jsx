@@ -21,7 +21,7 @@ export default function ChemistryHeader({ compact = false }) {
         <div className="header-content">
           <div className="logo">
             <Link className="logoLink" href="/ximchistka">
-              Белый кит
+              Чистота Экспресс
             </Link>
           </div>
 
@@ -63,7 +63,7 @@ export default function ChemistryHeader({ compact = false }) {
           )}
 
           <a href="tel:+79187779772" className="phone">
-            +7 918 777-97-72
+            +7 (918) 777-97-72
           </a>
         </div>
       </div>

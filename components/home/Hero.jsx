@@ -5,22 +5,22 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
-          <span className="section-label">Профессиональный клининг в Ереване</span>
+          <span className="section-label">Профессиональный клининг в Ставрополе</span>
           <h1 className={styles.title}>
             Уборка, которой<br />
             <span className={styles.accent}>можно доверять</span>
           </h1>
           <p className={styles.sub}>
-            Квартиры, офисы, коммерческие объекты. Работаем по чек-листу,
-            проверяем каждую зону. Гарантируем результат.
+            Квартиры, дома, офисы и коммерческие объекты. Работаем по чек-листу,
+            проверяем каждую зону и отвечаем за результат.
           </p>
           <div className={styles.price}>
             <span className={styles.priceFrom}>от</span>
-            <span className={styles.priceAmount}>10 000 ֏</span>
+            <span className={styles.priceAmount}>3 000 ₽</span>
           </div>
           <div className={styles.actions}>
-            <a href="https://t.me/nonstopclean" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Заказать уборку онлайн
+            <a href="https://wa.me/79187779772" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Заказать уборку в WhatsApp
             </a>
             <a href="#process" className="btn btn-secondary">
               Как мы работаем
@@ -63,11 +63,11 @@ export default function Hero() {
             ))}
           </ul>
           <div className={styles.cardFooter}>
-            <a href="tel:+37493111772" className={`btn btn-primary ${styles.cardBtn}`}>
+            <a href="tel:+79187779772" className={`btn btn-primary ${styles.cardBtn}`}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              +374 93 111 772
+              +7 (918) 777-97-72
             </a>
           </div>
         </div>

@@ -25,14 +25,14 @@ export default function ChoiceSection() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.left}>
-            <span className="section-label">Почему Non-Stop</span>
+            <span className="section-label">Почему Чистота Экспресс</span>
             <h2 className="section-title">Когда уборка перестаёт<br />быть заботой</h2>
             <p className="section-sub">
               Вы не думаете о том, что убрали или не убрали —<br />
               мы берём ответственность за результат.
             </p>
             <a
-              href="https://t.me/nonstopclean"
+              href="https://wa.me/79187779772"
               target="_blank"
               rel="noopener noreferrer"
               className={`btn btn-primary ${styles.cta}`}

@@ -13,7 +13,7 @@ export default function CTASection() {
         </div>
         <div className={styles.actions}>
           <a
-            href="https://t.me/nonstopclean"
+            href="https://wa.me/79187779772"
             target="_blank"
             rel="noopener noreferrer"
             className={`btn btn-primary ${styles.mainBtn}`}
@@ -22,7 +22,7 @@ export default function CTASection() {
           </a>
           <div className={styles.links}>
             <a
-              href="https://wa.me/37444410861"
+              href="https://wa.me/79187779772"
               target="_blank"
               rel="noopener noreferrer"
               className={`btn btn-outline-white ${styles.socialBtn}`}
@@ -34,15 +34,13 @@ export default function CTASection() {
               WhatsApp
             </a>
             <a
-              href="https://t.me/nonstopclean"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+79187779772"
               className={`btn btn-outline-white ${styles.socialBtn}`}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 14.447l-2.94-.918c-.64-.203-.653-.64.136-.948l11.49-4.43c.535-.194 1.003.131.686 1.097z"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              Telegram
+              Позвонить
             </a>
           </div>
         </div>

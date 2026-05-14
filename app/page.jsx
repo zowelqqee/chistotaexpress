@@ -8,9 +8,9 @@ import CTASection from "../components/home/CTASection";
 import Footer from "../components/home/Footer";
 
 export const metadata = {
-  title: "Non-Stop — премиальный клининг в Ереване",
+  title: "Чистота Экспресс — клининг в Ставрополе",
   description:
-    "Премиальный клининг в Ереване: квартиры, офисы, коммерческие объекты, калькулятор стоимости и подробное описание сервиса.",
+    "Чистота Экспресс — профессиональный клининг в Ставрополе: квартиры, офисы, коммерческие объекты, калькулятор стоимости и подробное описание сервиса.",
 };
 
 export default function HomePage() {

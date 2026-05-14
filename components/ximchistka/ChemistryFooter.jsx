@@ -6,14 +6,14 @@ export default function ChemistryFooter() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Белый Кит</h3>
+            <h3>Чистота Экспресс</h3>
             <p>Профессиональная химчистка мебели в Ставрополе</p>
             <p style={{ marginTop: 16 }}>Работаем ежедневно с 8:00 до 22:00</p>
           </div>
 
           <div className="footer-section">
             <h3>Контакты</h3>
-            <a href="tel:+79187779772">+7 918 777-97-72</a>
+            <a href="tel:+79187779772">+7 (918) 777-97-72</a>
             <a href="https://wa.me/79187779772">WhatsApp</a>
             <p style={{ marginTop: 8 }}>г. Ставрополь, Ставропольский край</p>
           </div>
@@ -39,7 +39,7 @@ export default function ChemistryFooter() {
 
         <div className="footer-bottom">
           <p>
-            © 2026 Белый Кит. Все права защищены. Профессиональная химчистка мебели
+            © {new Date().getFullYear()} Чистота Экспресс. Все права защищены. Профессиональная химчистка мебели
             в Ставрополе.
           </p>
           <Link className="oferlink" href="/ofer">

@@ -3,34 +3,34 @@
 import { useState, useMemo } from 'react'
 import styles from './PricingCalculator.module.css'
 
-const supportRooms = [10000, 14000, 18000, 25000, 31000]
-const generalRooms = [25000, 35000, 45000, 55000, 65000]
+const supportRooms = [3000, 4000, 5000, 6500, 8000]
+const generalRooms = [6500, 8500, 10500, 12500, 14500]
 
 function calcPrice({ type, format, value, dirty, weird, eco }) {
   let price = 0
 
   if (type === 'apartment') {
     if (format === 'support') {
-      price = value <= 5 ? supportRooms[value - 1] : value * 250
+      price = value <= 5 ? supportRooms[value - 1] : supportRooms[supportRooms.length - 1] + (value - 5) * 1500
     } else if (format === 'general') {
-      price = value <= 5 ? generalRooms[value - 1] : value * 750
+      price = value <= 5 ? generalRooms[value - 1] : generalRooms[generalRooms.length - 1] + (value - 5) * 2000
     } else if (format === 'post') {
-      price = value * 1000
+      price = value * 2500
     } else if (format === 'all') {
-      price = Math.max(60000, value * 800)
+      price = Math.max(12000, value * 5000)
     }
   } else {
-    price = value * 510
+    price = value * 120
   }
 
-  if (dirty || weird) price *= 1.45
-  if (eco) price += 9000
+  if (dirty || weird) price *= 1.35
+  if (eco) price += 1500
 
   return Math.round(price)
 }
 
 function formatPrice(n) {
-  return '≈ ' + n.toLocaleString('ru-RU') + ' ֏'
+  return '≈ ' + n.toLocaleString('ru-RU') + ' ₽'
 }
 
 const propertyTypes = [
@@ -80,7 +80,7 @@ export default function PricingCalculator() {
                     key={pt.id}
                     type="button"
                     className={`${styles.chip} ${type === pt.id ? styles.chipActive : ''}`}
-                    onClick={() => { setType(pt.id); setValue(isApartment ? 2 : 50) }}
+                    onClick={() => { setType(pt.id); setValue(pt.id === 'apartment' ? 2 : 50) }}
                   >
                     {pt.label}
                   </button>
@@ -133,21 +133,21 @@ export default function PricingCalculator() {
                   <input type="checkbox" checked={dirty} onChange={e => setDirty(e.target.checked)} />
                   <span className={styles.modLabel}>
                     <span>Очень грязно</span>
-                    <span className={styles.modTag}>+45%</span>
+                    <span className={styles.modTag}>+35%</span>
                   </span>
                 </label>
                 <label className={`${styles.mod} ${weird ? styles.modActive : ''}`}>
                   <input type="checkbox" checked={weird} onChange={e => setWeird(e.target.checked)} />
                   <span className={styles.modLabel}>
                     <span>Нестандарт</span>
-                    <span className={styles.modTag}>+45%</span>
+                    <span className={styles.modTag}>+35%</span>
                   </span>
                 </label>
                 <label className={`${styles.mod} ${eco ? styles.modActive : ''}`}>
                   <input type="checkbox" checked={eco} onChange={e => setEco(e.target.checked)} />
                   <span className={styles.modLabel}>
                     <span>ЭКО-химия</span>
-                    <span className={styles.modTag}>+9 000 ֏</span>
+                    <span className={styles.modTag}>+1 500 ₽</span>
                   </span>
                 </label>
               </div>
@@ -160,7 +160,7 @@ export default function PricingCalculator() {
               <p className={styles.resultPrice}>{formatPrice(price)}</p>
               <p className={styles.resultNote}>Финальная цена уточняется при обращении. Выезд менеджера бесплатно.</p>
               <a
-                href="https://t.me/nonstopclean"
+                href="https://wa.me/79187779772"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn btn-primary ${styles.resultBtn}`}
@@ -168,7 +168,7 @@ export default function PricingCalculator() {
                 Оставить заявку
               </a>
               <a
-                href="tel:+37493111772"
+                href="tel:+79187779772"
                 className={`btn btn-secondary ${styles.resultBtn}`}
               >
                 Позвонить
