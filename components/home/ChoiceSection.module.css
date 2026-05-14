@@ -34,7 +34,7 @@
 }
 
 .point:hover {
-  border-color: #b2ebf2;
+  border-color: var(--accent-border);
   box-shadow: var(--shadow-sm);
 }
 

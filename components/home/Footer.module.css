@@ -1,6 +1,6 @@
 .footer {
-  background: #0f172a;
-  color: #94a3b8;
+  background: #062e1a;
+  color: #a9c9b5;
 }
 
 .inner {
@@ -51,7 +51,7 @@
 .logoSub {
   font-size: 10px;
   font-weight: 500;
-  color: #64748b;
+  color: #7fac91;
   text-transform: uppercase;
   letter-spacing: .08em;
 }
@@ -59,7 +59,7 @@
 .brandDesc {
   font-size: 14px;
   line-height: 1.7;
-  color: #64748b;
+  color: #8eb89f;
 }
 
 .colTitle {
@@ -67,7 +67,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: #475569;
+  color: #79a98b;
   margin-bottom: 16px;
 }
 
@@ -80,7 +80,7 @@
 
 .navLink {
   font-size: 14px;
-  color: #94a3b8;
+  color: #a9c9b5;
   transition: color .15s;
 }
 
@@ -111,7 +111,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #94a3b8;
+  color: #a9c9b5;
   transition: color .15s;
 }
 
@@ -121,7 +121,7 @@
 
 .contactItem svg {
   flex-shrink: 0;
-  color: #475569;
+  color: #79a98b;
 }
 
 .hours {
@@ -129,22 +129,22 @@
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #64748b;
+  color: #8eb89f;
 }
 
 .hours svg {
   flex-shrink: 0;
-  color: #475569;
+  color: #79a98b;
 }
 
 .bottom {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid rgba(185, 232, 203, .18);
   padding: 20px 0;
 }
 
 .copy {
   font-size: 13px;
-  color: #475569;
+  color: #79a98b;
 }
 
 @media (max-width: 768px) {

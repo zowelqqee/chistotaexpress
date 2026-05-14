@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <>
+    <div className="cleaning-scope">
       <Header />
       <main>
         <Hero />
@@ -26,6 +26,6 @@ export default function HomePage() {
         <CTASection />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

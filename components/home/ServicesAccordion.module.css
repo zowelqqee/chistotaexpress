@@ -19,13 +19,13 @@
 
 .tab:hover {
   color: var(--text-primary);
-  border-color: #c0e8ec;
+  border-color: var(--accent-border);
 }
 
 .tabActive {
   background: var(--accent-light);
   color: var(--accent-dark);
-  border-color: #80deea;
+  border-color: var(--accent-border);
   font-weight: 600;
 }
 
@@ -43,12 +43,12 @@
 }
 
 .item:hover {
-  border-color: #b2ebf2;
+  border-color: var(--accent-border);
 }
 
 .itemOpen {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0,188,212,.08);
+  box-shadow: 0 0 0 3px var(--accent-wash);
 }
 
 .trigger {

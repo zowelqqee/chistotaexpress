@@ -47,7 +47,7 @@
 }
 
 .chip:hover {
-  border-color: #b2ebf2;
+  border-color: var(--accent-border);
   color: var(--text-primary);
 }
 
@@ -114,13 +114,13 @@
   height: 20px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 2px 6px rgba(0,188,212,.4);
+  box-shadow: 0 2px 6px var(--accent-shadow);
   cursor: pointer;
   transition: box-shadow .15s, transform .15s;
 }
 
 .range::-webkit-slider-thumb:hover {
-  box-shadow: 0 2px 10px rgba(0,188,212,.6);
+  box-shadow: 0 2px 10px var(--accent-shadow-strong);
   transform: scale(1.1);
 }
 
@@ -130,7 +130,7 @@
   border-radius: 50%;
   background: var(--accent);
   border: none;
-  box-shadow: 0 2px 6px rgba(0,188,212,.4);
+  box-shadow: 0 2px 6px var(--accent-shadow);
   cursor: pointer;
 }
 

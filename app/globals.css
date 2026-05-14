@@ -2,6 +2,20 @@
 @import "./chemistry.css";
 @import "./offer.css";
 
+:root {
+  --brand-primary: #22a85a;
+  --brand-primary-dark: #14783d;
+  --brand-primary-ring: rgba(34, 168, 90, 0.28);
+  --brand-primary-wash: rgba(34, 168, 90, 0.16);
+  --brand-accent: #22a85a;
+  --brand-accent-dark: #14783d;
+  --brand-accent-ring: rgba(34, 168, 90, 0.3);
+  --brand-text: #2d3532;
+  --brand-muted: #66736e;
+  --brand-surface: #f0fbf5;
+  --brand-border: #b9e8cb;
+}
+
 html,
 body {
   min-height: 100%;
@@ -9,4 +23,6 @@ body {
 
 body {
   margin: 0;
+  color: var(--brand-text);
+  background: #fbfffd;
 }
