@@ -1,0 +1,162 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-soft);
+  border: 1.5px solid var(--border);
+  transition: all .15s;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  border-color: #c0e8ec;
+}
+
+.tabActive {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border-color: #80deea;
+  font-weight: 600;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.item:hover {
+  border-color: #b2ebf2;
+}
+
+.itemOpen {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,188,212,.08);
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: none;
+  text-align: left;
+  gap: 16px;
+}
+
+.triggerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.serviceName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.servicePrice {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-light);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.chevron {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .22s ease;
+}
+
+.itemOpen .body {
+  grid-template-rows: 1fr;
+}
+
+.body > * {
+  overflow: hidden;
+}
+
+.details {
+  list-style: none;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 0;
+}
+
+.details li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.calcLink {
+  display: inline-block;
+  margin: 16px 24px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  transition: color .15s;
+}
+
+.calcLink:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .trigger {
+    padding: 16px 18px;
+  }
+
+  .serviceName {
+    font-size: 15px;
+  }
+}

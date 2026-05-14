@@ -1,0 +1,12 @@
+@import "./home-global.css";
+@import "./chemistry.css";
+@import "./offer.css";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}

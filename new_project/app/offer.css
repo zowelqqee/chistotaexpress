@@ -1,0 +1,82 @@
+.offerPage {
+  background: #f4f4f4;
+}
+
+.offerPage main {
+  padding: 48px 0 72px;
+}
+
+.offerPage .offerCard {
+  max-width: 840px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.offerPage h1 {
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3498db;
+  color: #2c3e50;
+  text-align: center;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.offerPage .offerLead {
+  margin: 0 auto 12px;
+  max-width: 720px;
+  color: #475569;
+  text-align: center;
+}
+
+.offerPage .offerSection {
+  margin-top: 28px;
+}
+
+.offerPage .offerSectionHeading {
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: #ecf0f1;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}
+
+.offerPage .offerSectionHeading h2 {
+  margin: 0;
+  color: #34495e;
+  font-size: 22px;
+}
+
+.offerPage p,
+.offerPage ul,
+.offerPage ol {
+  margin: 10px 0;
+  color: #333;
+  line-height: 1.65;
+}
+
+.offerPage ul,
+.offerPage ol {
+  padding-left: 20px;
+}
+
+.offerPage li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .offerPage main {
+    padding: 32px 0 56px;
+  }
+
+  .offerPage .offerCard {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .offerPage .offerSectionHeading h2 {
+    font-size: 18px;
+  }
+}

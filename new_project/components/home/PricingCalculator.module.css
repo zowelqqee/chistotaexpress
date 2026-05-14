@@ -1,0 +1,249 @@
+.section {
+  background: var(--bg-soft);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+}
+
+.legend {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: #fff;
+  border: 1.5px solid var(--border);
+  transition: all .15s;
+}
+
+.chip:hover {
+  border-color: #b2ebf2;
+  color: var(--text-primary);
+}
+
+.chipActive {
+  background: var(--accent-light);
+  color: var(--accent-dark) !important;
+  border-color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.chipWide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 16px;
+}
+
+.chipLabel {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chipHint {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.chipWide.chipActive .chipHint {
+  color: var(--accent-dark);
+  opacity: .8;
+}
+
+.rangeWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rangeMin,
+.rangeMax {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 28px;
+  text-align: center;
+}
+
+.range {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--pct, 50%), var(--border) var(--pct, 50%));
+  outline: none;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 2px 6px rgba(0,188,212,.4);
+  cursor: pointer;
+  transition: box-shadow .15s, transform .15s;
+}
+
+.range::-webkit-slider-thumb:hover {
+  box-shadow: 0 2px 10px rgba(0,188,212,.6);
+  transform: scale(1.1);
+}
+
+.range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,188,212,.4);
+  cursor: pointer;
+}
+
+.modifiers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mod {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+
+.mod input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.modActive {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.modLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.modTag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+/* Result card */
+.result {
+  position: sticky;
+  top: 88px;
+}
+
+.resultCard {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resultLabel {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+}
+
+.resultPrice {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--accent-dark);
+  line-height: 1;
+}
+
+.resultNote {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding-top: 4px;
+  border-top: 1px solid var(--bg-soft);
+}
+
+.resultBtn {
+  width: 100%;
+  font-size: 14px;
+  padding: 12px;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .result {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .chips {
+    gap: 6px;
+  }
+
+  .chip {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
