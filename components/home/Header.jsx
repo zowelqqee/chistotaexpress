@@ -40,10 +40,21 @@ export default function Header() {
               {l.label}
             </a>
           ))}
-          <a href="/ximchistka/" className={styles.navLinkAccent} onClick={() => setMenuOpen(false)}>
-            Химчистка мебели
-          </a>
         </nav>
+
+        <a href="/ximchistka/" className={styles.serviceCta}>
+          <span className={styles.serviceCtaIcon}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M4 11.5c0-1.7 1.3-3 3-3h10c1.7 0 3 1.3 3 3V16a2 2 0 0 1-2 2h-1v-2.5a1.5 1.5 0 0 0-3 0V18h-4v-2.5a1.5 1.5 0 0 0-3 0V18H6a2 2 0 0 1-2-2z" />
+              <path d="M7 8.5V7a5 5 0 0 1 10 0v1.5" />
+            </svg>
+          </span>
+          <span className={styles.serviceCtaCopy}>
+            <span className={styles.serviceCtaTitle}>Химчистка мебели</span>
+            <span className={styles.serviceCtaNote}>Диваны, кресла, матрасы</span>
+          </span>
+          <span className={styles.serviceCtaArrow}>→</span>
+        </a>
 
         <div className={styles.right}>
           <div className={styles.langSwitcher}>

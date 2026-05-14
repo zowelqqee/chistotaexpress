@@ -30,7 +30,7 @@
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font: 'Manrope', system-ui, -apple-system, sans-serif;
   --max-w: 1200px;
   color: var(--text-primary);
   background: var(--bg);
