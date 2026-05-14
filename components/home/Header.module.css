@@ -145,36 +145,8 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
-}
-
-.langSwitcher {
-  display: flex;
-  gap: 2px;
-  background: var(--bg-soft);
-  border-radius: var(--radius-sm);
-  padding: 3px;
-}
-
-.langBtn {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  background: transparent;
-  transition: background .15s, color .15s;
-}
-
-.langBtn:hover {
-  color: var(--text-primary);
-}
-
-.langActive {
-  background: #fff;
-  color: var(--accent-dark) !important;
-  box-shadow: var(--shadow-sm);
 }
 
 .callBtn {
@@ -302,10 +274,6 @@
 }
 
 @media (max-width: 480px) {
-  .langSwitcher {
-    display: none;
-  }
-
   .inner {
     gap: 12px;
   }

@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
           <div className={styles.actions}>
             <a href="https://wa.me/79187779772" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Заказать уборку в WhatsApp
+              Заказать уборку
             </a>
             <a href="#process" className="btn btn-secondary">
               Как мы работаем
