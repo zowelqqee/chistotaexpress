@@ -62,6 +62,22 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a href="https://t.me/Chistotaexpress" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 14.447l-2.94-.918c-.64-.203-.653-.64.136-.948l11.49-4.43c.535-.194 1.003.131.686 1.097z"/>
+                </svg>
+                Telegram @Chistotaexpress
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/chistotaexpress" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25zm8.875 1.125a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5"/>
+                </svg>
+                Instagram @Chistotaexpress
+              </a>
+            </li>
+            <li>
               <div className={styles.contactItem}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1118 0z"/>

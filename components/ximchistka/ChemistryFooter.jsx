@@ -15,6 +15,8 @@ export default function ChemistryFooter() {
             <h3>Контакты</h3>
             <a href="tel:+79187779772">+7 (918) 777-97-72</a>
             <a href="https://wa.me/79187779772">WhatsApp</a>
+            <a href="https://t.me/Chistotaexpress">Telegram @Chistotaexpress</a>
+            <a href="https://instagram.com/chistotaexpress">Instagram @Chistotaexpress</a>
             <p style={{ marginTop: 8 }}>г. Ставрополь, Ставропольский край</p>
           </div>
 

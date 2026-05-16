@@ -3,27 +3,10 @@
 import { useState, useMemo } from 'react'
 import styles from './PricingCalculator.module.css'
 
-const supportRooms = [3000, 4000, 5000, 6500, 8000]
-const generalRooms = [6500, 8500, 10500, 12500, 14500]
+function calcPrice({ format, value, dirty, eco }) {
+  let price = format === 'regular' ? value * 200 : value * 500
 
-function calcPrice({ type, format, value, dirty, weird, eco }) {
-  let price = 0
-
-  if (type === 'apartment') {
-    if (format === 'support') {
-      price = value <= 5 ? supportRooms[value - 1] : supportRooms[supportRooms.length - 1] + (value - 5) * 1500
-    } else if (format === 'general') {
-      price = value <= 5 ? generalRooms[value - 1] : generalRooms[generalRooms.length - 1] + (value - 5) * 2000
-    } else if (format === 'post') {
-      price = value * 2500
-    } else if (format === 'all') {
-      price = Math.max(12000, value * 5000)
-    }
-  } else {
-    price = value * 120
-  }
-
-  if (dirty || weird) price *= 1.35
+  if (dirty) price *= 1.35
   if (eco) price += 1500
 
   return Math.round(price)
@@ -34,33 +17,22 @@ function formatPrice(n) {
 }
 
 const propertyTypes = [
-  { id: 'apartment', label: 'Квартира' },
-  { id: 'office', label: 'Офис' },
-  { id: 'commercial', label: 'Коммерция' },
-  { id: 'hotel', label: 'Отель' },
-]
-
-const formats = [
-  { id: 'support', label: 'Поддерживающая', hint: 'Регулярная уборка' },
-  { id: 'general', label: 'Генеральная', hint: 'Глубокая чистка' },
-  { id: 'post', label: 'После ремонта', hint: 'Строительная пыль' },
-  { id: 'all', label: 'Всё включено', hint: 'Максимальный объём' },
+  { id: 'regular', label: 'Обычная уборка', hint: '200 ₽ за м², всё включено' },
+  { id: 'post', label: 'После ремонта', hint: '500 ₽ за м², всё включено' },
 ]
 
 export default function PricingCalculator() {
-  const [type, setType] = useState('apartment')
-  const [format, setFormat] = useState('support')
-  const [value, setValue] = useState(2)
+  const [format, setFormat] = useState('regular')
+  const [value, setValue] = useState(40)
   const [dirty, setDirty] = useState(false)
-  const [weird, setWeird] = useState(false)
   const [eco, setEco] = useState(false)
 
-  const isApartment = type === 'apartment'
-  const maxValue = isApartment ? 10 : 250
+  const minValue = 10
+  const maxValue = 250
 
   const price = useMemo(() =>
-    calcPrice({ type, format, value, dirty, weird, eco }),
-    [type, format, value, dirty, weird, eco]
+    calcPrice({ format, value, dirty, eco }),
+    [format, value, dirty, eco]
   )
 
   return (
@@ -68,61 +40,41 @@ export default function PricingCalculator() {
       <div className="container">
         <span className="section-label">Калькулятор</span>
         <h2 className="section-title">Рассчитайте стоимость</h2>
-        <p className="section-sub">Укажите параметры — получите ориентировочную цену сразу.</p>
+        <p className="section-sub">Обычная уборка — 200 ₽ за м², после ремонта — 500 ₽ за м². Всё включено.</p>
 
         <div className={styles.wrapper}>
           <div className={styles.form}>
             <fieldset className={styles.fieldset}>
-              <legend className={styles.legend}>Тип помещения</legend>
+              <legend className={styles.legend}>Формат уборки</legend>
               <div className={styles.chips}>
                 {propertyTypes.map(pt => (
                   <button
                     key={pt.id}
                     type="button"
-                    className={`${styles.chip} ${type === pt.id ? styles.chipActive : ''}`}
-                    onClick={() => { setType(pt.id); setValue(pt.id === 'apartment' ? 2 : 50) }}
+                    className={`${styles.chip} ${styles.chipWide} ${format === pt.id ? styles.chipActive : ''}`}
+                    onClick={() => setFormat(pt.id)}
                   >
-                    {pt.label}
+                    <span className={styles.chipLabel}>{pt.label}</span>
+                    <span className={styles.chipHint}>{pt.hint}</span>
                   </button>
                 ))}
               </div>
             </fieldset>
 
-            {isApartment && (
-              <fieldset className={styles.fieldset}>
-                <legend className={styles.legend}>Формат уборки</legend>
-                <div className={styles.chips}>
-                  {formats.map(f => (
-                    <button
-                      key={f.id}
-                      type="button"
-                      className={`${styles.chip} ${styles.chipWide} ${format === f.id ? styles.chipActive : ''}`}
-                      onClick={() => setFormat(f.id)}
-                    >
-                      <span className={styles.chipLabel}>{f.label}</span>
-                      <span className={styles.chipHint}>{f.hint}</span>
-                    </button>
-                  ))}
-                </div>
-              </fieldset>
-            )}
-
             <fieldset className={styles.fieldset}>
-              <legend className={styles.legend}>
-                {isApartment ? `Количество комнат: ${value}` : `Площадь: ${value} м²`}
-              </legend>
+              <legend className={styles.legend}>{`Площадь: ${value} м²`}</legend>
               <div className={styles.rangeWrap}>
-                <span className={styles.rangeMin}>{isApartment ? '1' : '10'}</span>
+                <span className={styles.rangeMin}>{minValue}</span>
                 <input
                   type="range"
-                  min={isApartment ? 1 : 10}
+                  min={minValue}
                   max={maxValue}
                   step={1}
                   value={value}
                   onChange={e => setValue(Number(e.target.value))}
                   className={styles.range}
                 />
-                <span className={styles.rangeMax}>{isApartment ? '10+' : '250 м²'}</span>
+                <span className={styles.rangeMax}>{maxValue} м²</span>
               </div>
             </fieldset>
 
@@ -133,13 +85,6 @@ export default function PricingCalculator() {
                   <input type="checkbox" checked={dirty} onChange={e => setDirty(e.target.checked)} />
                   <span className={styles.modLabel}>
                     <span>Очень грязно</span>
-                    <span className={styles.modTag}>+35%</span>
-                  </span>
-                </label>
-                <label className={`${styles.mod} ${weird ? styles.modActive : ''}`}>
-                  <input type="checkbox" checked={weird} onChange={e => setWeird(e.target.checked)} />
-                  <span className={styles.modLabel}>
-                    <span>Нестандарт</span>
                     <span className={styles.modTag}>+35%</span>
                   </span>
                 </label>
@@ -158,7 +103,7 @@ export default function PricingCalculator() {
             <div className={styles.resultCard}>
               <p className={styles.resultLabel}>Стоимость уборки</p>
               <p className={styles.resultPrice}>{formatPrice(price)}</p>
-              <p className={styles.resultNote}>Финальная цена уточняется при обращении. Выезд менеджера бесплатно.</p>
+              <p className={styles.resultNote}>Всё включено. Отдельно считаются только ЭКО-химия и повышенная загрязнённость.</p>
               <a
                 href="https://wa.me/79187779772"
                 target="_blank"

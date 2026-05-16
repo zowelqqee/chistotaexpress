@@ -16,7 +16,7 @@ export default function Hero() {
           </p>
           <div className={styles.price}>
             <span className={styles.priceFrom}>от</span>
-            <span className={styles.priceAmount}>3 000 ₽</span>
+            <span className={styles.priceAmount}>200 ₽/м²</span>
           </div>
           <div className={styles.actions}>
             <a href="https://wa.me/79187779772" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
