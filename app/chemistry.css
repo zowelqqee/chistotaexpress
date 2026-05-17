@@ -37,13 +37,41 @@
 }
 
 .chemPage .logo {
-  font-size: 20px;
-  font-weight: 700;
   color: #00a8e8;
 }
 
 .chemPage .logoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   color: inherit;
+}
+
+.chemPage .logoMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 168, 232, 0.12);
+  border: 1px solid rgba(0, 168, 232, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.chemPage .logoImage {
+  width: 140%;
+  height: 140%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.chemPage .logoText {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .chemPage nav {

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './Footer.module.css'
 
 const navLinks = [
@@ -13,7 +14,15 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
           <a href="#" className={styles.logo}>
-            <span className={styles.logoMark}>ЧЭ</span>
+            <span className={styles.logoMark}>
+              <Image
+                src="/img/logo.png"
+                alt=""
+                width={44}
+                height={44}
+                className={styles.logoImage}
+              />
+            </span>
             <span className={styles.logoText}>
               <span className={styles.logoMain}>Чистота Экспресс</span>
               <span className={styles.logoSub}>Клининг Ставрополь</span>

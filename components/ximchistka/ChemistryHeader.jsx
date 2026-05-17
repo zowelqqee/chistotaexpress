@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -21,7 +22,17 @@ export default function ChemistryHeader({ compact = false }) {
         <div className="header-content">
           <div className="logo">
             <Link className="logoLink" href="/ximchistka">
-              Чистота Экспресс
+              <span className="logoMark">
+                <Image
+                  src="/img/logo.png"
+                  alt=""
+                  width={42}
+                  height={42}
+                  className="logoImage"
+                  priority
+                />
+              </span>
+              <span className="logoText">Чистота Экспресс</span>
             </Link>
           </div>
 
