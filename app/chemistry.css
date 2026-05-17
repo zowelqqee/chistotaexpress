@@ -62,10 +62,11 @@
 }
 
 .chemPage .logoImage {
-  width: 140%;
-  height: 140%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   object-position: center;
+  padding: 2px;
 }
 
 .chemPage .logoText {
