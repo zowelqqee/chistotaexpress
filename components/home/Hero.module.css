@@ -2,8 +2,24 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(160deg, var(--hero-start) 0%, #f8fffb 55%, var(--hero-end) 100%);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, var(--hero-start) 0%, rgba(240, 255, 246, .97) 32%, rgba(240, 255, 246, .56) 59%, rgba(228, 249, 236, .14) 100%),
+    linear-gradient(180deg, rgba(240, 255, 246, .12), var(--hero-end)),
+    url('/img/hero-cleaning-interior.png') center / cover no-repeat;
   padding-top: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 180px;
+  background: linear-gradient(transparent, var(--hero-end));
+  z-index: -1;
+  pointer-events: none;
 }
 
 .inner {
@@ -176,12 +192,19 @@
 
   .card {
     max-width: 480px;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(10px);
   }
 }
 
 @media (max-width: 640px) {
   .hero {
     padding-top: 0;
+    background-position: 64% center;
+    background-image:
+      linear-gradient(90deg, rgba(240, 255, 246, .98) 0%, rgba(240, 255, 246, .93) 64%, rgba(240, 255, 246, .45) 100%),
+      linear-gradient(180deg, rgba(240, 255, 246, .12), var(--hero-end)),
+      url('/img/hero-cleaning-interior.png');
   }
 
   .inner {

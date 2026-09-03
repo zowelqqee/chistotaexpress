@@ -148,7 +148,12 @@
 
 .callBtn {
   font-size: 14px;
-  padding: 9px 18px;
+  padding: 9px 15px;
+  letter-spacing: .01em;
+}
+
+.phoneNumber {
+  font-variant-numeric: tabular-nums;
 }
 
 .burger {
@@ -265,7 +270,9 @@
   }
 
   .callBtn {
-    display: none;
+    display: inline-flex;
+    padding: 8px 10px;
+    font-size: 13px;
   }
 
   .right {
@@ -298,5 +305,9 @@
 
   .serviceCta {
     padding: 11px 13px;
+  }
+
+  .callBtn svg {
+    display: none;
   }
 }

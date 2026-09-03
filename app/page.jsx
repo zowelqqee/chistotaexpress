@@ -4,6 +4,7 @@ import ProcessSection from "../components/home/ProcessSection";
 import ServicesAccordion from "../components/home/ServicesAccordion";
 import PricingCalculator from "../components/home/PricingCalculator";
 import ChoiceSection from "../components/home/ChoiceSection";
+import BeforeAfterSection from "../components/home/BeforeAfterSection";
 import CTASection from "../components/home/CTASection";
 import Footer from "../components/home/Footer";
 
@@ -22,6 +23,7 @@ export default function HomePage() {
         <ProcessSection />
         <ServicesAccordion />
         <PricingCalculator />
+        <BeforeAfterSection />
         <ChoiceSection />
         <CTASection />
       </main>
