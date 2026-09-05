@@ -26,6 +26,10 @@ export default function Hero() {
               Написать в WhatsApp
             </a>
           </div>
+          <div className={styles.quickFacts} aria-label="Ключевые преимущества">
+            <span>Свои средства</span>
+            <span>Безопасно для детей и животных</span>
+          </div>
           <div className={styles.trust}>
             <div className={styles.trustItem}>
               <strong>500+</strong>

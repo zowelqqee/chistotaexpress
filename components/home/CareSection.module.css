@@ -1,0 +1,111 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -160px;
+  top: -230px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(73, 200, 126, .18), rgba(73, 200, 126, 0) 68%);
+  pointer-events: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(270px, .8fr) 1.25fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.intro { position: relative; z-index: 1; }
+
+.intro :global(.section-sub) { max-width: 420px; }
+
+.note {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 28px;
+  padding: 10px 14px;
+  border-radius: 100px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.noteDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(34, 168, 90, .13);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 22px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff 0%, #f7fffa 100%);
+  box-shadow: 0 12px 26px rgba(20, 120, 61, .06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:nth-child(2) { transform: translateY(24px); }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.card:nth-child(2):hover { transform: translateY(18px); }
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: auto;
+  border-radius: 13px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #65d391);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.card h3 {
+  margin: 22px 0 9px;
+  font-size: 17px;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 32px; }
+  .cards { padding-bottom: 24px; }
+}
+
+@media (max-width: 640px) {
+  .cards { grid-template-columns: 1fr; gap: 12px; }
+  .card, .card:nth-child(2) { min-height: 0; transform: none; }
+  .card:hover, .card:nth-child(2):hover { transform: none; }
+  .icon { margin-bottom: 24px; }
+}
