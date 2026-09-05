@@ -43,6 +43,13 @@ export default function CareSection() {
             ))}
           </div>
         </div>
+        <figure className={styles.featuredImage}>
+          <img src="/img/cleaning-living-room.png" alt="Специалист Чистоты Экспресс убирает современную гостиную" />
+          <figcaption>
+            <span>Чистота Экспресс</span>
+            <strong>Дом, в который приятно возвращаться</strong>
+          </figcaption>
+        </figure>
       </div>
     </section>
   )

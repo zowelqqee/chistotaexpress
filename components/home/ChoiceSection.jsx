@@ -25,6 +25,10 @@ export default function ChoiceSection() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.left}>
+            <div className={styles.imageWrap}>
+              <img src="/img/cleaning-kitchen.png" alt="Аккуратная уборка кухни" />
+              <span>Внимание к деталям</span>
+            </div>
             <span className="section-label">Почему Чистота Экспресс</span>
             <h2 className="section-title">Когда уборка перестаёт<br />быть заботой</h2>
             <p className="section-sub">
