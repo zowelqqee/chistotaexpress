@@ -20,7 +20,7 @@ export default function Header() {
         <a href="#" className={styles.logo}>
           <span className={styles.logoMark}>
             <Image
-              src="/img/logo.png"
+              src="/img/logo-turquoise.png"
               alt=""
               width={44}
               height={44}
