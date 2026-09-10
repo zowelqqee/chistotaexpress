@@ -22,12 +22,12 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <PricingCalculator />
+        <ServicesAccordion />
+        <ChoiceSection />
         <ProcessSection />
         <CareSection />
-        <ServicesAccordion />
-        <PricingCalculator />
         <BeforeAfterSection />
-        <ChoiceSection />
         <CTASection />
       </main>
       <Footer />
