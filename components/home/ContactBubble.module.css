@@ -9,12 +9,12 @@
   padding: 13px 17px;
   border: 1px solid rgba(255,255,255,.48);
   border-radius: 999px;
-  background: #20b95e;
+  background: #0faebc;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  box-shadow: 0 12px 30px rgba(13, 112, 53, .32);
+  box-shadow: 0 12px 30px rgba(8, 119, 131, .32);
   transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
 }
-.bubble:hover { transform: translateY(-3px); background: #159a49; box-shadow: 0 16px 36px rgba(13, 112, 53, .4); }
+.bubble:hover { transform: translateY(-3px); background: #087783; box-shadow: 0 16px 36px rgba(8, 119, 131, .4); }
 @media (max-width: 640px) { .bubble { right: 16px; bottom: 16px; width: 50px; height: 50px; padding: 0; justify-content: center; } .bubble span { display: none; } }

@@ -98,7 +98,7 @@
 
 .quickFacts span {
   padding: 6px 10px;
-  border: 1px solid rgba(34, 168, 90, .2);
+  border: 1px solid rgba(15, 174, 188, .2);
   border-radius: 999px;
   background: rgba(255, 255, 255, .62);
   color: var(--accent-dark);

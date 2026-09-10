@@ -1,6 +1,6 @@
 .footer {
-  background: #062e1a;
-  color: #a9c9b5;
+  background: #063c44;
+  color: #b6d9dc;
 }
 
 .inner {
@@ -28,7 +28,7 @@
   height: 44px;
   border-radius: 12px;
   background: #fff;
-  border: 1px solid rgba(185, 232, 203, .32);
+  border: 1px solid rgba(183, 231, 236, .32);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@
 .logoSub {
   font-size: 10px;
   font-weight: 500;
-  color: #7fac91;
+  color: #8db9be;
   text-transform: uppercase;
   letter-spacing: .08em;
 }
@@ -67,7 +67,7 @@
 .brandDesc {
   font-size: 14px;
   line-height: 1.7;
-  color: #8eb89f;
+  color: #a0c8cc;
 }
 
 .colTitle {
@@ -75,7 +75,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: #79a98b;
+  color: #79adb3;
   margin-bottom: 16px;
 }
 
@@ -88,7 +88,7 @@
 
 .navLink {
   font-size: 14px;
-  color: #a9c9b5;
+  color: #b6d9dc;
   transition: color .15s;
 }
 
@@ -119,7 +119,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #a9c9b5;
+  color: #b6d9dc;
   transition: color .15s;
 }
 
@@ -129,7 +129,7 @@
 
 .contactItem svg {
   flex-shrink: 0;
-  color: #79a98b;
+  color: #79adb3;
 }
 
 .hours {
@@ -137,22 +137,22 @@
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #8eb89f;
+  color: #a0c8cc;
 }
 
 .hours svg {
   flex-shrink: 0;
-  color: #79a98b;
+  color: #79adb3;
 }
 
 .bottom {
-  border-top: 1px solid rgba(185, 232, 203, .18);
+  border-top: 1px solid rgba(183, 231, 236, .18);
   padding: 20px 0;
 }
 
 .copy {
   font-size: 13px;
-  color: #79a98b;
+  color: #79adb3;
 }
 
 @media (max-width: 768px) {

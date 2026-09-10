@@ -3,17 +3,17 @@
 @import "./offer.css";
 
 :root {
-  --brand-primary: #22a85a;
-  --brand-primary-dark: #14783d;
-  --brand-primary-ring: rgba(34, 168, 90, 0.28);
-  --brand-primary-wash: rgba(34, 168, 90, 0.16);
-  --brand-accent: #22a85a;
-  --brand-accent-dark: #14783d;
-  --brand-accent-ring: rgba(34, 168, 90, 0.3);
-  --brand-text: #2d3532;
-  --brand-muted: #66736e;
-  --brand-surface: #f0fbf5;
-  --brand-border: #b9e8cb;
+  --brand-primary: #0faebc;
+  --brand-primary-dark: #087783;
+  --brand-primary-ring: rgba(15, 174, 188, 0.28);
+  --brand-primary-wash: rgba(15, 174, 188, 0.16);
+  --brand-accent: #0faebc;
+  --brand-accent-dark: #087783;
+  --brand-accent-ring: rgba(15, 174, 188, 0.3);
+  --brand-text: #19353a;
+  --brand-muted: #50686c;
+  --brand-surface: #f0fafb;
+  --brand-border: #b7e7ec;
 }
 
 html,
@@ -24,5 +24,5 @@ body {
 body {
   margin: 0;
   color: var(--brand-text);
-  background: #fbfffd;
+  background: #fbfefe;
 }
