@@ -6,6 +6,30 @@ const details = [
   { src: '/img/stuliia.jpg', alt: 'Мебель после профессиональной чистки' },
 ]
 
+const beforeAfterCases = [
+  {
+    title: 'Химчистка матраса',
+    before: '/img/до_1.jpg',
+    after: '/img/после_1.jpg',
+  },
+  {
+    title: 'Мытьё окон',
+    before: '/img/до_2.jpg',
+    after: '/img/после_2.jpg',
+  },
+  {
+    title: 'Химчистка дивана',
+    before: '/img/до-3.jpg',
+    after: '/img/после-3.jpg',
+  },
+]
+
+const videos = [
+  { src: '/img/видеообщее.mp4', title: 'Мытьё окон' },
+  { src: '/img/диван.mp4', title: 'Химчистка дивана' },
+  { src: '/img/ремонт.mp4', title: 'Уборка после ремонта' },
+]
+
 export default function BeforeAfterSection() {
   return (
     <section className={`section ${styles.section}`} id="gallery">
@@ -34,6 +58,46 @@ export default function BeforeAfterSection() {
 
         <div className={styles.details}>
           {details.map((item) => <img key={item.src} src={item.src} alt={item.alt} />)}
+        </div>
+
+        <div className={styles.realWorks}>
+          <div className={styles.subheading}>
+            <span className="section-label">Наши работы</span>
+            <h3>Реальные результаты до и после</h3>
+          </div>
+          <div className={styles.caseGrid}>
+            {beforeAfterCases.map((item) => (
+              <article className={styles.caseCard} key={item.title}>
+                <div className={styles.caseImages}>
+                  <figure>
+                    <img src={item.before} alt={`${item.title}: до уборки`} loading="lazy" />
+                    <figcaption>До</figcaption>
+                  </figure>
+                  <figure>
+                    <img src={item.after} alt={`${item.title}: после уборки`} loading="lazy" />
+                    <figcaption>После</figcaption>
+                  </figure>
+                </div>
+                <h4>{item.title}</h4>
+              </article>
+            ))}
+          </div>
+
+          <div className={styles.videoHeading}>
+            <h3>Процесс и результат в видео</h3>
+            <p>Смотрите реальные кадры с наших объектов.</p>
+          </div>
+          <div className={styles.videoGrid}>
+            {videos.map((item) => (
+              <figure className={styles.videoCard} key={item.src}>
+                <video controls playsInline preload="metadata" aria-label={item.title}>
+                  <source src={item.src} type="video/mp4" />
+                  Ваш браузер не поддерживает видео.
+                </video>
+                <figcaption>{item.title}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -110,6 +110,110 @@
   box-shadow: var(--shadow-sm);
 }
 
+.realWorks {
+  margin-top: 64px;
+}
+
+.subheading {
+  margin-bottom: 24px;
+}
+
+.subheading h3,
+.videoHeading h3 {
+  color: var(--text-primary);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+}
+
+.caseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.caseCard,
+.videoCard {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.caseImages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  background: var(--border);
+}
+
+.caseImages figure {
+  position: relative;
+  aspect-ratio: 9 / 15;
+  overflow: hidden;
+  background: #e8f3f4;
+}
+
+.caseImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caseImages figcaption {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(18, 45, 49, .78);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  backdrop-filter: blur(6px);
+}
+
+.caseCard h4 {
+  padding: 16px 18px 18px;
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.videoHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 56px 0 24px;
+}
+
+.videoHeading p {
+  color: var(--text-secondary);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.videoCard video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  object-fit: cover;
+  background: #dfeaec;
+}
+
+.videoCard figcaption {
+  padding: 15px 18px 17px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
 @media (max-width: 800px) {
   .heading,
   .featured {
@@ -131,6 +235,19 @@
   .featuredCopy {
     padding: 28px;
   }
+
+  .caseGrid,
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .caseImages figure {
+    aspect-ratio: 9 / 13;
+  }
+
+  .videoCard video {
+    max-height: 640px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -150,5 +267,18 @@
   .details img {
     border-radius: 10px;
     aspect-ratio: 1;
+  }
+
+  .realWorks {
+    margin-top: 44px;
+  }
+
+  .videoHeading {
+    display: block;
+    margin-top: 44px;
+  }
+
+  .videoHeading p {
+    margin-top: 8px;
   }
 }
