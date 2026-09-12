@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import styles from './PricingCalculator.module.css'
 
 function calcPrice({ format, value, dirty, eco }) {
-  let price = format === 'regular' ? value * 90 : value * 150
+  let price = format === 'regular' ? value * 50 : value * 150
 
   if (dirty) price *= 1.35
   if (eco) price += 1500
@@ -17,7 +17,7 @@ function formatPrice(n) {
 }
 
 const propertyTypes = [
-  { id: 'regular', label: 'Обычная уборка', hint: '90 ₽ за м², всё включено' },
+  { id: 'regular', label: 'Обычная уборка', hint: 'от 50 ₽ за м², всё включено' },
   { id: 'post', label: 'После ремонта', hint: '150 ₽ за м², всё включено' },
 ]
 
@@ -40,7 +40,7 @@ export default function PricingCalculator() {
       <div className="container">
         <span className="section-label">Калькулятор</span>
         <h2 className="section-title">Рассчитайте стоимость</h2>
-        <p className="section-sub">Обычная уборка — 90 ₽ за м², после ремонта — 150 ₽ за м². Всё включено.</p>
+        <p className="section-sub">Обычная уборка — от 50 ₽ за м², после ремонта — 150 ₽ за м². Всё включено.</p>
 
         <div className={styles.wrapper}>
           <div className={styles.form}>

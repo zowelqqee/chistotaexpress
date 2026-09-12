@@ -16,7 +16,7 @@ export default function Hero() {
           </p>
           <div className={styles.price}>
             <span className={styles.priceFrom}>от</span>
-            <span className={styles.priceAmount}>90 ₽/м²</span>
+            <span className={styles.priceAmount}>50 ₽/м²</span>
           </div>
           <div className={styles.actions}>
             <a href="#calculator" className="btn btn-primary">

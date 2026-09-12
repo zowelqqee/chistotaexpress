@@ -25,7 +25,7 @@ const beforeAfterCases = [
 ]
 
 const videos = [
-  { src: '/img/видеообщее.mp4', title: 'Мытьё окон' },
+  { src: '/img/видеообщее.mp4', title: 'Мытьё квартиры после ремонта' },
   { src: '/img/диван.mp4', title: 'Химчистка дивана' },
   { src: '/img/ремонт.mp4', title: 'Уборка после ремонта' },
 ]
